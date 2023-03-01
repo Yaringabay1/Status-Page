@@ -6,16 +6,16 @@
 # write access to the server via any other hostnames. The first FQDN in the list will be treated as the preferred name.
 #
 # Example: ALLOWED_HOSTS = ['status-page.example.com', 'status-page.internal.local']
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # PostgreSQL database configuration. See the Django documentation for a complete list of available parameters:
 #   https://docs.djangoproject.com/en/stable/ref/settings/#databases
 DATABASE = {
     'NAME': 'status-page',         # Database name
-    'USER': '',               # PostgreSQL username
-    'PASSWORD': '',           # PostgreSQL password
-    'HOST': 'localhost',      # Database server
-    'PORT': '',               # Database port (leave blank for default)
+    'USER': 'yaringabay1',               # PostgreSQL username
+    'PASSWORD': 'yaringabay25',           # PostgreSQL password
+    'HOST': 'status-page.cluster-cydboyyrn7sk.eu-west-1.rds.amazonaws.com',      # Database server
+    'PORT': '5432',               # Database port (leave blank for default)
     'CONN_MAX_AGE': 300,      # Max database connection age
 }
 
@@ -23,7 +23,7 @@ DATABASE = {
 # for each. Full connection details are required.
 REDIS = {
     'tasks': {
-        'HOST': 'localhost',
+        'HOST': 'onboarding-aws-redis.y83w40.ng.0001.euw1.cache.amazonaws.com',
         'PORT': 6379,
         # Comment out `HOST` and `PORT` lines and uncomment the following if using Redis Sentinel
         # 'SENTINELS': [('mysentinel.redis.example.com', 6379)],
@@ -36,7 +36,7 @@ REDIS = {
         # 'INSECURE_SKIP_TLS_VERIFY': False,
     },
     'caching': {
-        'HOST': 'localhost',
+        'HOST': 'onboarding-aws-redis.y83w40.ng.0001.euw1.cache.amazonaws.com',
         'PORT': 6379,
         # Comment out `HOST` and `PORT` lines and uncomment the following if using Redis Sentinel
         # 'SENTINELS': [('mysentinel.redis.example.com', 6379)],
@@ -57,7 +57,7 @@ SITE_URL = ""
 # For optimal security, SECRET_KEY should be at least 50 characters in length and contain a mix of letters, numbers, and
 # symbols. Status-Page will not run without this defined. For more information, see
 # https://docs.djangoproject.com/en/stable/ref/settings/#std:setting-SECRET_KEY
-SECRET_KEY = ''
+SECRET_KEY = 'u*vP^0G9h+H0E46DJ826o8VxgEaXpLxMsQq*XVjAbhMG-u$dum'
 
 #
 # Optional Settings
@@ -80,7 +80,7 @@ AUTH_PASSWORD_VALIDATORS = [
     # },
 ]
 
-# Base URL path if accessing Status-Page within a directory. For example, if installed at
+# Base URL path if accessing Status-Page within a directory. For example,` if installed at
 # https://example.com/status-page/, set: BASE_PATH = 'status-page/'
 BASE_PATH = ''
 
